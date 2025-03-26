@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView, Text} from 'react-native';
 
-export default function elevatedCard() {
+export default function ElevatedCard() {
   return (
     <View>
       <Text style={styles.headingText}>Elevated Cards !!</Text>
-      <ScrollView horizontal={true} style={styles.contianer}>
+      <ScrollView horizontal={true} style={styles.container}>
         <View style={[styles.card, styles.cardElevated]}>
           <Text>Tap</Text>
         </View>
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingHorizontal: 10,
   },
-  contianer: {
+  container: {
     // flex: 1,
     // flexDirection: 'row',
     padding: 8,

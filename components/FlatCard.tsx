@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 
-export default function flatCards() {
+export default function FlatCard() {
   return (
     <View>
       {/* style={}  {} is to apply common styles */}
       <Text style={styles.headingText}>Flat Cards !!</Text>
-      <View style={styles.contianer}>
+      <View style={styles.container}>
         {/* style={[]}  [] is to apply diff styles */}
         <View style={[styles.card, styles.cardOne]}>
           <Text>Red</Text>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingHorizontal: 10,
   },
-  contianer: {
+  container: {
     flex: 1,
     flexDirection: 'row',
     padding: 20,
