@@ -7,9 +7,10 @@ export default function FancyCard() {
       <Text style={styles.headingText}>Trending places !!</Text>
       <View style={[styles.card, styles.elevatedCard]}>
         <Image
-          source={{
-            uri: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5vr4AHK1cc0C5udhxMEOXIjpvbZ0wjAVdZ6vccsJbewP0kZMivnu9XBKsc-rbLynvIPm3sc91lO2TUgfpd2wCfc2ZCdXz5YfRrc-mPu1NGbD2c27eRGQFqn1li07HDnNIICu5DkIj8v4/s640/L-115.JPG',
-          }}
+          source={require('../assets/city_img.png')}
+          //   source={{
+          //     uri: 'https://i.pinimg.com/736x/86/8c/f8/868cf8e306037bf4fe930a31bf021954.jpg',
+          //   }}
           style={styles.cardImage}></Image>
         <View style={styles.cardBody}>
           <Text style={styles.cardTitle}>Shaniwar Wada</Text>
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   elevatedCard: {
-    backgroundColor: 'rgb(255, 246, 227)',
+    backgroundColor: '#F9DDA4',
     elevation: 2,
     shadowOffset: {
       height: 1,
@@ -55,8 +56,10 @@ const styles = StyleSheet.create({
     // borderRadius: 12,
   },
   cardImage: {
+    width: '100%',
     height: 180,
     marginBottom: 8,
+    alignItems: 'center',
   },
   cardBody: {
     flex: 1,
