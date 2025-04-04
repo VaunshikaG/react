@@ -20,10 +20,10 @@ export default function ActionCard() {
           What's new in javascript 21 - ES12
         </Text>
         <Image
-          source={require('../assets/js_img.jpg')}
-          //   source={{
-          //     uri: 'https://i.pinimg.com/736x/b2/c8/8c/b2c88cc60c9dd46457c7aa11564f07f6.jpg',
-          //   }}
+          // source={require('../assets/js_img.jpg')}
+          source={{
+            uri: 'https://i.pinimg.com/736x/b2/c8/8c/b2c88cc60c9dd46457c7aa11564f07f6.jpg',
+          }}
           style={styles.cardImage}
           onError={error =>
             console.log('Image load error:', error.nativeEvent.error)

@@ -7,10 +7,10 @@ export default function FancyCard() {
       <Text style={styles.headingText}>Trending places !!</Text>
       <View style={[styles.card, styles.elevatedCard]}>
         <Image
-          source={require('../assets/city_img.png')}
-          //   source={{
-          //     uri: 'https://i.pinimg.com/736x/86/8c/f8/868cf8e306037bf4fe930a31bf021954.jpg',
-          //   }}
+          // source={require('../assets/city_img.png')}
+          source={{
+            uri: 'https://i.pinimg.com/736x/86/8c/f8/868cf8e306037bf4fe930a31bf021954.jpg',
+          }}
           style={styles.cardImage}></Image>
         <View style={styles.cardBody}>
           <Text style={styles.cardTitle}>Shaniwar Wada</Text>
