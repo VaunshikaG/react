@@ -10,12 +10,12 @@ function AppStyler() {
   return (
     <SafeAreaView>
       <ScrollView>
-        <ContactList />
         <FlatCard />
         <ElevatedCard />
         <FancyCard />
         <FancyCard />
         <ActionCard />
+        <ContactList />
       </ScrollView>
     </SafeAreaView>
   );
