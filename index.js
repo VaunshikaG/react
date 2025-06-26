@@ -1,7 +1,3 @@
-/**
- * @format
- */
-
 import {AppRegistry} from 'react-native';
 import App from './ep_code/awesome01/App';
 import {name as appName} from './app.json';
