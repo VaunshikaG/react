@@ -51,16 +51,16 @@ function PassApp() {
     const specialChars = '!@#$%^&*()_+';
 
     if (upperCase) {
-      characterList += upperCase;
+      characterList += upperCaseChars;
     }
     if (lowerCase) {
-      characterList += lowerCase;
+      characterList += lowerCaseChars;
     }
     if (numbers) {
-      characterList += numbers;
+      characterList += dightChars;
     }
     if (symbols) {
-      characterList += symbols;
+      characterList += specialChars;
     }
 
     const passResult = createPassword(characterList, passwordLength);
@@ -89,8 +89,8 @@ function PassApp() {
             onSubmit={values => {
               console.log(values);
 
-              // generatePasswordString(Number(values.passwordLength));
-              generatePasswordString(+values.passwordLength);
+              generatePasswordString(Number(values.passwordLength));
+              // generatePasswordString(+values.passwordLength);
             }}>
             {({
               values,
@@ -123,42 +123,52 @@ function PassApp() {
                 </View>
                 <View style={styles.inputWrapper}>
                   <Text style={styles.heading}>Include lowercase</Text>
-                  <BouncyCheckBox
-                    isChecked={lowerCase}
-                    onPress={() => setLowerCase(!lowerCase)}
-                    fillColor="#29AB87"
-                  />
+                  <View style={styles.inputColumn}>
+                    <BouncyCheckBox
+                      isChecked={lowerCase}
+                      onPress={() => setLowerCase(!lowerCase)}
+                      fillColor="#29AB87"
+                    />
+                  </View>
                 </View>
                 <View style={styles.inputWrapper}>
                   <Text style={styles.heading}>Include uppercase</Text>
-                  <BouncyCheckBox
-                    isChecked={upperCase}
-                    onPress={() => setUpperCase(!upperCase)}
-                    fillColor="#29AB87"
-                  />
+                  <View style={styles.inputColumn}>
+                    <BouncyCheckBox
+                      isChecked={upperCase}
+                      onPress={() => setUpperCase(!upperCase)}
+                      fillColor="#29AB87"
+                    />
+                  </View>
                 </View>
                 <View style={styles.inputWrapper}>
                   <Text style={styles.heading}>Include numbers</Text>
-                  <BouncyCheckBox
-                    isChecked={numbers}
-                    onPress={() => setNumbers(!numbers)}
-                    fillColor="#29AB87"
-                  />
+                  <View style={styles.inputColumn}>
+                    <BouncyCheckBox
+                      isChecked={numbers}
+                      onPress={() => setNumbers(!numbers)}
+                      fillColor="#29AB87"
+                    />
+                  </View>
                 </View>
                 <View style={styles.inputWrapper}>
                   <Text style={styles.heading}>Include symbols</Text>
-                  <BouncyCheckBox
-                    isChecked={symbols}
-                    onPress={() => setSymbols(!symbols)}
-                    fillColor="#29AB87"
-                  />
+                  <View style={styles.inputColumn}>
+                    <BouncyCheckBox
+                      isChecked={symbols}
+                      onPress={() => setSymbols(!symbols)}
+                      fillColor="#29AB87"
+                    />
+                  </View>
                 </View>
 
                 <View style={styles.formActions}>
                   <TouchableOpacity
                     disabled={!isValid}
                     style={styles.primaryBtn}
-                    onPress={() => handleSubmit}>
+                    onPress={() => {
+                      handleSubmit();
+                    }}>
                     <Text>Generate Password</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
@@ -238,11 +248,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   primaryBtn: {
-    width: 120,
+    width: 150,
     padding: 10,
     borderRadius: 8,
     marginHorizontal: 8,
     backgroundColor: '#5DA3FA',
+    alignItems: 'center',
   },
   primaryBtnTxt: {
     color: '#fff',
@@ -250,7 +261,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   secondaryBtn: {
-    width: 120,
+    width: 150,
     padding: 10,
     borderRadius: 8,
     marginHorizontal: 8,

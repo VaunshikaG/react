@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {View, Button, Text, SafeAreaView} from 'react-native';
 
@@ -12,5 +12,3 @@ function App() {
     </SafeAreaView>
   );
 }
-
-export default App;
