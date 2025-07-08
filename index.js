@@ -7,10 +7,12 @@ import BgChanger from './ep_code/bgChanger_04/bgChanger';
 import PassApp from './ep_code/password_generator_03/PasswordApp';
 import DiceApp from './ep_code/roll_dice_05/App';
 import counterApp from './ep_code/coding_ques';
+import CurrencyApp from './ep_code/currency_app_06/App';
 
 // AppRegistry.registerComponent(appName, () => AppPro);
 // AppRegistry.registerComponent(appName, () => AppStyler);
 // AppRegistry.registerComponent(appName, () => PassApp);
 // AppRegistry.registerComponent(appName, () => BgChanger);
-AppRegistry.registerComponent(appName, () => DiceApp);
+// AppRegistry.registerComponent(appName, () => DiceApp);
 // AppRegistry.registerComponent(appName, () => counterApp);
+AppRegistry.registerComponent(appName, () => CurrencyApp);
